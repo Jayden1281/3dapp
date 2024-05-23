@@ -209,7 +209,7 @@
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-              <li><a href="index.php">Home </a></li>
+              <li><a href="../index.php">Home </a></li>
               <li><a href="modelController.php">3D Models</a></li>
               <li><a href="productsController.php">Products</a></li>
               <li><a href="contactusController.php">Contact us</a></li>
@@ -226,7 +226,7 @@
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-            <li><a href="index.php">Home </a></li>
+            <li><a href="../index.php">Home </a></li>
               <li><a href="modelController.php">3D Models</a></li>
               <li><a href="productsController.php">Products</a></li>
               <li><a href="contactusController.php">Contact us</a></li>
