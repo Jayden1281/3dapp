@@ -106,7 +106,7 @@
               </p>
               <h2 class="title">
                 <span class="animated d-block" data-animation-in="fadeInRight" data-delay-in=".800">Beverage Lab</span>
-                <span class="animated font-weight-bold" data-animation-in="fadeInUp" data-delay-in="1.5">Coca‑Cola Store</span>
+                <span class="animated font-weight-bold" data-animation-in="fadeInUp" data-delay-in="1.5">Coca?Cola Store</span>
               </h2>
               <a href="https://www.coca-cola.com/us/en/offerings/topo-chico/sabores-and-mixers-sweepstakes" class="btn btn-outline-primary btn--lg animated mt-45 mt-sm-25" data-animation-in="fadeInLeft" data-delay-in="1.9">More Page</a>
             </div>
@@ -163,7 +163,7 @@
                           <h3 class="title">
                             <a href="">BARQ ROOT BEER</a>
                           </h3>
-                          <p>Barq’s has bite! Do you know why? Well, it’s unique Barq’s spice is what makes this root beer soda truly original and truly tasty, complete with a caffeine kick. Not to mention the full-bodied flavor that is so distinct and different it can only be Barq’s</p>
+                          <p>Barq's?has bite! Do you know why? Well, it's unique?Barq's?spice is what makes this?root beer soda?truly original and truly?tasty, complete with a?caffeine?kick. Not to mention the full-bodied flavor that is so distinct and different it can only be?Barq's</p>
                           <div class="star-rating">
                             <span class="ion-ios-star"></span>
                             <span class="ion-ios-star"></span>
@@ -176,36 +176,38 @@
                     </div>
                   </div>
                 </div>
+              </div>
                 <div class="slider-item">
-                <div class="card product-card">
-                  <div class="card-body p-0">
-                    <div class="media flex-column">
-                      <div class="product-thumbnail position-relative">
-                        <span class="badge badge-danger top-right">New</span>
-                        <a href="https://www.coca-cola.com/gb/en/brands/coca-cola-original-taste">
-                          <img class="first-img" style="width: 300px; height: 300px;" src="Controls/static/picture/dimg.png" alt="<?php echo $product['product_name']; ?>">
-                        </a>
+                  <div class="card product-card">
+                    <div class="card-body p-0">
+                      <div class="media flex-column">
+                        <div class="product-thumbnail position-relative">
+                          <span class="badge badge-danger top-right">New</span>
+                          <a href="https://www.coca-cola.com/gb/en/brands/coca-cola-original-taste">
+                            <img class="first-img" style="width: 300px; height: 300px;" src="Controls/static/picture/dimg.png" alt="<?php echo $product['product_name']; ?>">
+                          </a>
 
-                        <!-- product links end-->
-                      </div>
-                      <div class="media-body">
-                        <div class="product-desc">
-                          <h3 class="title">
-                            <a href="">TOPO CHICO MINERAL WATER</a>
-                          </h3>
-                          <p>Topo Chico Sparkling Mineral Water has been bottled at the source in Monterrey, Mexico, since 1985. Its natural mineral composition is great for quenching thirst.</p>
-                          <div class="star-rating">
-                            <span class="ion-ios-star"></span>
-                            <span class="ion-ios-star"></span>
-                            <span class="ion-ios-star"></span>
-                            <span class="ion-ios-star"></span>
-                            <span class="ion-ios-star de-selected"></span>
+                          <!-- product links end-->
+                        </div>
+                        <div class="media-body">
+                          <div class="product-desc">
+                            <h3 class="title">
+                              <a href="">TOPO CHICO MINERAL WATER</a>
+                            </h3>
+                            <p>Topo Chico Sparkling Mineral Water has been bottled at the source in Monterrey, Mexico, since 1985. Its natural mineral composition is great for quenching thirst.</p>
+                            <div class="star-rating">
+                              <span class="ion-ios-star"></span>
+                              <span class="ion-ios-star"></span>
+                              <span class="ion-ios-star"></span>
+                              <span class="ion-ios-star"></span>
+                              <span class="ion-ios-star de-selected"></span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+              </div>
                 <div class="slider-item">
                 <div class="card product-card">
                   <div class="card-body p-0">
