@@ -218,10 +218,10 @@ Diversity, Equity and Inclusion Our people create a culture of inclusion, curios
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-              <li><a href="../index.php">Home </a></li>
-              <li><a href="modelController.php">3D Models</a></li>
-              <li><a href="productsController.php">Products</a></li>
-              <li><a href="contactusController.php">Contact us</a></li>
+              <li><a href="index.php">Home </a></li>
+              <li><a href="Controls/modelController.php">3D Models</a></li>
+              <li><a href="Controls/productsController.php">Products</a></li>
+              <li><a href="Controls/contactusController.php">Contact us</a></li>
             </ul>
             <!-- footer-menu end -->
           </div>
@@ -235,10 +235,10 @@ Diversity, Equity and Inclusion Our people create a culture of inclusion, curios
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-              <li><a href="../index.php">Home </a></li>
-              <li><a href="modelController.php">3D Models</a></li>
-              <li><a href="productsController.php">Products</a></li>
-              <li><a href="contactusController.php">Contact us</a></li>
+            <li><a href="index.php">Home </a></li>
+              <li><a href="Controls/modelController.php">3D Models</a></li>
+              <li><a href="Controls/productsController.php">Products</a></li>
+              <li><a href="Controls/contactusController.php">Contact us</a></li>
             </ul>
             <!-- footer-menu end -->
           </div>
