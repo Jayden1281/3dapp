@@ -198,16 +198,16 @@
             
           </div>
 
-          <table id="demo_table" class="gallery" style="margin-top: 5%;" >
+          <table id="demo_table" class="gallery" style="margin-top: 5%;">
             <tr>
-            <?php foreach ($products as $product): ?>
-              <td onclick="printMessage('<?php echo $product['product_name']; ?>')">
+      
+              <td onclick="printMessage('BARQ ROOT BEER')">
                 <div class="col-sm-6 col-lg-4 col-xl-3 mb-30" style="width: 80%;">
                   <div class="card product-card">
                     <div class="card-body">
                       <div class="product-thumbnail position-relative gallery">
                     
-                        <img class="first-img" style="width: 512px; height: 252px;" src="static/picture/<?php echo $product['product_image_name']; ?>" alt="<?php echo $product['product_name']; ?>" > 
+                        <img class="first-img" style="width: 512px; height: 252px;" src="static/picture/bimg.png" alt="<?php echo $product['product_name']; ?>" > 
                       </div>
                       <div class="product-desc py-0 px-0" >
                         <h3 class="title">
@@ -227,7 +227,59 @@
                   <!-- product-list End -->
                 </div>
               </td>
-              <?php endforeach; ?>
+              <td onclick="printMessage('TOPO CHICO MINERAL WATER')">
+                <div class="col-sm-6 col-lg-4 col-xl-3 mb-30" style="width: 80%;">
+                  <div class="card product-card">
+                    <div class="card-body">
+                      <div class="product-thumbnail position-relative gallery">
+                    
+                        <img class="first-img" style="width: 512px; height: 252px;" src="static/picture/cimg.png" alt="<?php echo $product['product_name']; ?>" > 
+                      </div>
+                      <div class="product-desc py-0 px-0" >
+                        <h3 class="title">
+                          <a href=""><?php echo $product['product_name']; ?></a>
+                        </h3>
+                        <p><?php echo $product['product_description']; ?></p>
+                        <div class="star-rating">
+                          <span class="ion-ios-star"></span>
+                          <span class="ion-ios-star"></span>
+                          <span class="ion-ios-star"></span>
+                          <span class="ion-ios-star"></span>
+                          <span class="ion-ios-star de-selected"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- product-list End -->
+                </div>
+              </td>
+              <td onclick="printMessage('PEACH CITRUS')">
+                <div class="col-sm-6 col-lg-4 col-xl-3 mb-30" style="width: 80%;">
+                  <div class="card product-card">
+                    <div class="card-body">
+                      <div class="product-thumbnail position-relative gallery">
+                    
+                        <img class="first-img" style="width: 512px; height: 252px;" src="static/picture/dimg.png" alt="<?php echo $product['product_name']; ?>" > 
+                      </div>
+                      <div class="product-desc py-0 px-0" >
+                        <h3 class="title">
+                          <a href=""><?php echo $product['product_name']; ?></a>
+                        </h3>
+                        <p><?php echo $product['product_description']; ?></p>
+                        <div class="star-rating">
+                          <span class="ion-ios-star"></span>
+                          <span class="ion-ios-star"></span>
+                          <span class="ion-ios-star"></span>
+                          <span class="ion-ios-star"></span>
+                          <span class="ion-ios-star de-selected"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- product-list End -->
+                </div>
+              </td>
+    
             </tr>
           </table>
     

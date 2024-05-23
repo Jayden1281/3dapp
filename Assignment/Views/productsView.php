@@ -82,10 +82,16 @@
           <div>
           <?php if (!empty($companyInfo)): ?>
             <h2 class="title mb-30">
-              <?php echo $companyInfo['company_slogan']; ?>      
+            Our purpose and passion have always been refreshment    
             </h2>
             <p class="mb-30">
-              <?php echo $companyInfo['company_history']; ?>
+            On May 8, 1886, Dr. John Pemberton served the world’s first Coca-Cola at Jacobs' Pharmacy in Atlanta, Ga. From that one iconic drink, we’ve evolved into a total beverage company. More than 1.9 billion servings of our drinks are enjoyed in more than 200 countries each day. And it’s the 700,000 individuals employed by The Coca-Cola Company and 225+ bottling partners that help to deliver refreshment across the globe.
+
+Our people are as diverse as our communities, with 700,000+ employees across company and bottling partners.
+
+Prioritizing sustainability in our operations and communities. We do business the right way, not just the easy way. Learn more about our sustainable and ethical ways of working.The Coca-Cola System Local bottlers work with us to bring our Coca‑Cola brand drinks to wherever you are in the world. Over 225 bottling partners across 900 bottling plants make up the Coca‑Cola system and help us deliver refreshment globally.
+
+Diversity, Equity and Inclusion Our people create a culture of inclusion, curiosity and diversity — at work and in our communities.History of The Coca-Cola Company We celebrate our company’s rich history. Since its birth at a soda fountain in downtown Atlanta in 1886, Coca‑Cola has been a catalyst for social interaction and inspired innovation. Discover the unique moments from our past, like the evolution of the iconic Coca-Cola bottle, the lovable Coca-Cola Santa Claus, and more.
             </p>
             <?php else: ?>
               <p></p>
@@ -115,11 +121,11 @@
 <section class="service-section pt-80 pb-50">
   <div class="container">
     <div class="row">
-    <?php foreach ($products as $product): ?>
+
       <div class="col-sm-6 col-lg-4 mb-4">
         <div class="single-blog">
           <div class="single-thumb mb-25 zoom-in d-block overflow-hidden">
-            <img src="static/picture/<?php echo $product['product_image_name']; ?>" alt="<?php echo $product['product_name']; ?>">
+            <img src="static/picture/bimg.png" alt="<?php echo $product['product_name']; ?>">
           </div>
           <div class="single-service">
             <h3 class="title text-capitalize mb-20"><?php echo $product['product_name']; ?></h3>
@@ -129,7 +135,35 @@
           </div>
         </div>
       </div>
-    <?php endforeach; ?>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="single-blog">
+          <div class="single-thumb mb-25 zoom-in d-block overflow-hidden">
+            <img src="static/picture/dimg.png" alt="<?php echo $product['product_name']; ?>">
+          </div>
+          <div class="single-service">
+            <h3 class="title text-capitalize mb-20"><?php echo $product['product_name']; ?></h3>
+            <p>
+                <?php echo $product['product_description']; ?>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="single-blog">
+          <div class="single-thumb mb-25 zoom-in d-block overflow-hidden">
+            <img src="static/picture/cimg.png" alt="<?php echo $product['product_name']; ?>">
+          </div>
+          <div class="single-service">
+            <h3 class="title text-capitalize mb-20"><?php echo $product['product_name']; ?></h3>
+            <p>
+                <?php echo $product['product_description']; ?>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
 
     </div>
   </div>

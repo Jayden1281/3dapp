@@ -1,16 +1,14 @@
 <?php
-//MySQL server information
-$servername = "localhost"; 
-$username = "root";
-$password = "root123";
-$dbname = "web3d";
+
+
+$dbfile = "web3d.db";
 
 try {
-   // Create PDO connection object
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+   // Create PDO connection object for SQLite
+    $conn = new PDO("sqlite:$dbfile");
     //Set PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+  
     
   // Database operations can be performed here
     
@@ -18,6 +16,4 @@ try {
     // Output error message
     echo "Connection failed: " . $e->getMessage();
 }
-
-
 ?>

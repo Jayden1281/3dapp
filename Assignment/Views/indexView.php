@@ -145,15 +145,75 @@
           <!-- first tab-pane -->
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             <div class="product-slider-init theme1 slick-nav">
-            <?php foreach ($products as $product): ?>
+   
               <div class="slider-item">
                 <div class="card product-card">
                   <div class="card-body p-0">
                     <div class="media flex-column">
                       <div class="product-thumbnail position-relative">
                         <span class="badge badge-danger top-right">New</span>
-                        <a href="<?php echo $product['produck_url']; ?>">
-                          <img class="first-img" style="width: 300px; height: 300px;" src="Controls/static/picture/<?php echo $product['product_image_name']; ?>" alt="<?php echo $product['product_name']; ?>">
+                        <a href="https://www.coca-cola.com/us/en/brands/fresca-sparkling-soda">
+                          <img class="first-img" style="width: 300px; height: 300px;" src="Controls/static/picture/bimg.png">
+                        </a>
+
+                        <!-- product links end-->
+                      </div>
+                      <div class="media-body">
+                        <div class="product-desc">
+                          <h3 class="title">
+                            <a href=""><?php echo $product['product_name']; ?></a>
+                          </h3>
+                          <p><?php echo $product['product_description']; ?></p>
+                          <div class="star-rating">
+                            <span class="ion-ios-star"></span>
+                            <span class="ion-ios-star"></span>
+                            <span class="ion-ios-star"></span>
+                            <span class="ion-ios-star"></span>
+                            <span class="ion-ios-star de-selected"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-item">
+                <div class="card product-card">
+                  <div class="card-body p-0">
+                    <div class="media flex-column">
+                      <div class="product-thumbnail position-relative">
+                        <span class="badge badge-danger top-right">New</span>
+                        <a href="https://www.coca-cola.com/gb/en/brands/coca-cola-original-taste">
+                          <img class="first-img" style="width: 300px; height: 300px;" src="Controls/static/picture/dimg.png" alt="<?php echo $product['product_name']; ?>">
+                        </a>
+
+                        <!-- product links end-->
+                      </div>
+                      <div class="media-body">
+                        <div class="product-desc">
+                          <h3 class="title">
+                            <a href=""><?php echo $product['product_name']; ?></a>
+                          </h3>
+                          <p><?php echo $product['product_description']; ?></p>
+                          <div class="star-rating">
+                            <span class="ion-ios-star"></span>
+                            <span class="ion-ios-star"></span>
+                            <span class="ion-ios-star"></span>
+                            <span class="ion-ios-star"></span>
+                            <span class="ion-ios-star de-selected"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-item">
+                <div class="card product-card">
+                  <div class="card-body p-0">
+                    <div class="media flex-column">
+                      <div class="product-thumbnail position-relative">
+                        <span class="badge badge-danger top-right">New</span>
+                        <a href="https://www.coca-cola.com/us/en/offerings/topo-chico/sabores-and-mixers-sweepstakes">
+                          <img class="first-img" style="width: 300px; height: 300px;" src="Controls/static/picture/cimg.png" alt="<?php echo $product['product_name']; ?>">
                         </a>
 
                         <!-- product links end-->
@@ -177,7 +237,7 @@
                   </div>
                 </div>
               </div>
-            <?php endforeach; ?>
+     
               <!-- slider-item end -->
 
 
