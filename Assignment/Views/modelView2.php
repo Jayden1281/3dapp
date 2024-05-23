@@ -211,9 +211,9 @@
                       </div>
                       <div class="product-desc py-0 px-0" >
                         <h3 class="title">
-                          <a href=""><?php echo $product['product_name']; ?></a>
+                          <a href="">BARQ ROOT BEER</a>
                         </h3>
-                        <p><?php echo $product['product_description']; ?></p>
+                        <p>Barq’s has bite! Do you know why? Well, it’s unique Barq’s spice is what makes this root beer soda truly original and truly tasty, complete with a caffeine kick. Not to mention the full-bodied flavor that is so distinct and different it can only be Barq’s</p>
                         <div class="star-rating">
                           <span class="ion-ios-star"></span>
                           <span class="ion-ios-star"></span>
@@ -237,9 +237,9 @@
                       </div>
                       <div class="product-desc py-0 px-0" >
                         <h3 class="title">
-                          <a href=""><?php echo $product['product_name']; ?></a>
+                          <a href="">TOPO CHICO MINERAL WATER</a>
                         </h3>
-                        <p><?php echo $product['product_description']; ?></p>
+                        <p>Topo Chico Sparkling Mineral Water has been bottled at the source in Monterrey, Mexico, since 1985. Its natural mineral composition is great for quenching thirst.</p>
                         <div class="star-rating">
                           <span class="ion-ios-star"></span>
                           <span class="ion-ios-star"></span>
@@ -263,9 +263,9 @@
                       </div>
                       <div class="product-desc py-0 px-0" >
                         <h3 class="title">
-                          <a href=""><?php echo $product['product_name']; ?></a>
+                          <a href="">PEACH CITRUS</a>
                         </h3>
-                        <p><?php echo $product['product_description']; ?></p>
+                        <p>It's the grapefruit flavor you know with a crisp peach taste you'll love. It's a flavor experience born of sweet and citrus blends, with no sugar, no caffeine, and no calories.</p>
                         <div class="star-rating">
                           <span class="ion-ios-star"></span>
                           <span class="ion-ios-star"></span>

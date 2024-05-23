@@ -125,12 +125,12 @@ Diversity, Equity and Inclusion Our people create a culture of inclusion, curios
       <div class="col-sm-6 col-lg-4 mb-4">
         <div class="single-blog">
           <div class="single-thumb mb-25 zoom-in d-block overflow-hidden">
-            <img src="static/picture/bimg.png" alt="<?php echo $product['product_name']; ?>">
+            <img src="static/picture/bimg.png" >
           </div>
           <div class="single-service">
-            <h3 class="title text-capitalize mb-20"><?php echo $product['product_name']; ?></h3>
+            <h3 class="title text-capitalize mb-20">BARQ ROOT BEER</h3>
             <p>
-                <?php echo $product['product_description']; ?>
+            Barq’s has bite! Do you know why? Well, it’s unique Barq’s spice is what makes this root beer soda truly original and truly tasty, complete with a caffeine kick. Not to mention the full-bodied flavor that is so distinct and different it can only be Barq’s
             </p>
           </div>
         </div>
@@ -138,12 +138,12 @@ Diversity, Equity and Inclusion Our people create a culture of inclusion, curios
       <div class="col-sm-6 col-lg-4 mb-4">
         <div class="single-blog">
           <div class="single-thumb mb-25 zoom-in d-block overflow-hidden">
-            <img src="static/picture/dimg.png" alt="<?php echo $product['product_name']; ?>">
+            <img src="static/picture/dimg.png" >
           </div>
           <div class="single-service">
-            <h3 class="title text-capitalize mb-20"><?php echo $product['product_name']; ?></h3>
+            <h3 class="title text-capitalize mb-20">TOPO CHICO MINERAL WATER</h3>
             <p>
-                <?php echo $product['product_description']; ?>
+            Topo Chico Sparkling Mineral Water has been bottled at the source in Monterrey, Mexico, since 1985. Its natural mineral composition is great for quenching thirst.
             </p>
           </div>
         </div>
@@ -152,12 +152,12 @@ Diversity, Equity and Inclusion Our people create a culture of inclusion, curios
       <div class="col-sm-6 col-lg-4 mb-4">
         <div class="single-blog">
           <div class="single-thumb mb-25 zoom-in d-block overflow-hidden">
-            <img src="static/picture/cimg.png" alt="<?php echo $product['product_name']; ?>">
+            <img src="static/picture/cimg.png" >
           </div>
           <div class="single-service">
-            <h3 class="title text-capitalize mb-20"><?php echo $product['product_name']; ?></h3>
+            <h3 class="title text-capitalize mb-20">PEACH CITRUS</h3>
             <p>
-                <?php echo $product['product_description']; ?>
+            It's the grapefruit flavor you know with a crisp peach taste you'll love. It's a flavor experience born of sweet and citrus blends, with no sugar, no caffeine, and no calories.
             </p>
           </div>
         </div>
