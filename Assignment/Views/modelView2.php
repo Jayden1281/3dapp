@@ -507,41 +507,16 @@ document.getElementById('leftViewBtn').addEventListener('click', function() {
 
       switch (productName) {
     case 'BARQ ROOT BEER':
-      // x3dElement1.style.display = 'block';
-      // x3dElement2.style.display = 'none';
-      // x3dElement3.style.display = 'none';
-
-      // btn001.style.display = 'block';
-      // btn002.style.display = 'none';
-      // btn003.style.display = 'none';
-      window.location.href = 'http://localhost/Controls/modelController.php';
+      window.location.href = 'https://users.sussex.ac.uk/~by85/3dapp/Assignment/Controls/modelController.php';
       break;
     case 'TOPO CHICO MINERAL WATER':
-      // x3dElement1.style.display = 'none';
-      // x3dElement2.style.display = 'block';
-      // x3dElement3.style.display = 'none';
-      // btn001.style.display = 'none';
-      // btn002.style.display = 'block';
-      // btn003.style.display = 'none';
-      window.location.href = 'http://localhost/Controls/modelController.php?view=model1';
+      window.location.href = 'https://users.sussex.ac.uk/~by85/3dapp/Assignment/Controls/modelController.php?view=model2';
       break;
     case 'PEACH CITRUS':
-      // x3dElement1.style.display = 'none';
-      // x3dElement2.style.display = 'none';
-      // x3dElement3.style.display = 'block';
-      // btn001.style.display = 'none';
-      // btn002.style.display = 'none';
-      // btn003.style.display = 'block';
-      window.location.href = 'http://localhost/Controls/modelController.php?view=model2';
+      window.location.href = 'https://users.sussex.ac.uk/~by85/3dapp/Assignment/Controls/modelController.php?view=model1';
       break;
     default:
-      // x3dElement1.style.display = 'none';
-      // x3dElement2.style.display = 'none';
-      // x3dElement3.style.display = 'block';
-      // btn001.style.display = 'none';
-      // btn002.style.display = 'none';
-      // btn003.style.display = 'block';
-      window.location.href = 'http://localhost/Controls/modelController.php';
+      window.location.href = 'https://users.sussex.ac.uk/~by85/3dapp/Assignment/Controls/modelController.php';
   }
 }
 
