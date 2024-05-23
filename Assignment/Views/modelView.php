@@ -19,6 +19,47 @@
     <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
 
     <style type="text/css">
+
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      padding-top: 60px; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0,0.9); 
+    }
+    
+
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
       #demo_table {
       border:0;
     }
@@ -26,6 +67,15 @@
 
    
     }
+    #x3dElement1 {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #x3dElement1 > div {
+    flex: 1;
+  }
+
 
    </style>
    
@@ -59,7 +109,7 @@
         <div class="col-xl-8 col-lg-7 d-none d-lg-block">
           <ul class="main-menu d-flex justify-content-center">
             <li class="ml-0">
-              <a href="homeController.php" class="ps-0">Home </a>
+              <a href="../index.php" class="ps-0">Home </a>
             </li>
             <li class="position-static active">
               <a href="modelController.php">3D Model</a>
@@ -91,7 +141,7 @@
       </div>
       <div class="col-12">
         <ol class="breadcrumb bg-transparent m-0 p-0 align-items-center justify-content-center">
-          <li class="breadcrumb-item"><a href="homeController.php">Home</a></li>
+          <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">
              3D Model
           </li>
@@ -111,25 +161,57 @@
       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
         <div class="row grid-view theme1 gallery">
           <div style="height:840px">
-            <x3d width='1000px' height='800px' id="x3dElement">
-                <scene id="mainScene">
-                <Inline id="inlineBox" nameSpaceName="dcm" url="static/models/amodel.x3d" />
-                
-                </scene>
-            </x3d>
+            <div id="x3dElement1">
+              <div >
+                <x3d width='1000px' height='800px'>
+                  <scene id="mainScene">
+                      <inline id="inlineBox" namespacename="model" mapdeftoid="true" url="./static/models/bmodel.x3d" render="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true">
+                        <viewpoint DEF="Camera001" position="0.17676 2.06076 10.76071" orientation="0.19405 0.98099 0.00325 0.04096" fieldOfView="0.602400004863739" description="Camera001" centerOfRotation="0,0,0" zNear="-1" zFar="-1" id="model__Camera001"></viewpoint>
+                        <transform DEF="cigarette" translation="-1.87699997425079 89.2799987792969 0.593699991703033" rotation="-0.00364100001752377 1 0.00708900019526482 -1.57099997997284" scale="0.163800001144409 0.163800001144409 0.163800001144409" render="true" bboxCenter="0,0,0" bboxSize="-1,-1,-1" center="0,0,0" scaleOrientation="0,0,0,0" id="model__cigarette">
+                        </transform>
+                      </inline>
+                    </scene>
+                </x3d>
+              </div>
+              <div>
+                      <div class="product-thumbnail position-relative gallery">
+                        <img class="first-img" style="width: 512px; height: 252px;" src="static/picture/bimg.png"  onclick="openModal(this)"> 
+                      </div>
+                      <div class="product-thumbnail position-relative gallery">
+                        <img class="first-img" style="width: 512px; height: 252px;" src="static/picture/dimg.png" onclick="openModal(this)"> 
+                      </div>
+                      <div class="product-thumbnail position-relative gallery">
+                        <img class="first-img" style="width: 512px; height: 252px;" src="static/picture/cimg.png"  onclick="openModal(this)"> 
+                      </div>
+              </div>
+            </div>
+
+            <div id='bt001' class="btn-group" role="group" aria-label="View Angle Buttons">
+              <button id="switchViewBtn" type="button" class="btn btn-primary">Switch View</button>
+              <button id="frontViewBtn" type="button" class="btn btn-primary">Front View</button>
+              <button id="sideViewBtn" type="button" class="btn btn-primary">Side View</button>
+              <button id="backViewBtn" type="button" class="btn btn-primary">Back View</button>
+              <button id="bottomViewBtn" type="button" class="btn btn-primary">Bottom View</button>
+     
+              <button id="leftViewBtn" type="button" class="btn btn-primary">Left View</button>
+            </div>
+
+
+            
           </div>
-          <table id="demo_table" class="gallery" style="marge">
+
+          <table id="demo_table" class="gallery" style="margin-top: 5%;">
             <tr>
             <?php foreach ($products as $product): ?>
-              <td file="static/models/<?php echo $product['product_model_path']; ?>">
+              <td onclick="printMessage('<?php echo $product['product_name']; ?>')">
                 <div class="col-sm-6 col-lg-4 col-xl-3 mb-30" style="width: 80%;">
                   <div class="card product-card">
                     <div class="card-body">
                       <div class="product-thumbnail position-relative gallery">
-                        <span class="badge badge-danger top-right ">New</span>
-                        <img class="first-img" style="width: 512px; height: 252px;" src="static/picture/<?php echo $product['product_image_name']; ?>" alt="<?php echo $product['product_name']; ?>">
+                    
+                        <img class="first-img" style="width: 512px; height: 252px;" src="static/picture/<?php echo $product['product_image_name']; ?>" alt="<?php echo $product['product_name']; ?>" > 
                       </div>
-                      <div class="product-desc py-0 px-0">
+                      <div class="product-desc py-0 px-0" >
                         <h3 class="title">
                           <a href=""><?php echo $product['product_name']; ?></a>
                         </h3>
@@ -141,7 +223,6 @@
                           <span class="ion-ios-star"></span>
                           <span class="ion-ios-star de-selected"></span>
                         </div>
-      
                       </div>
                     </div>
                   </div>
@@ -159,6 +240,27 @@
 
   </div>
 </div>
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="img01">
+  <div class="social-network" style="magrin-left:50%">
+      <ul class="d-flex" style="margin-top: 4%; margin-left: 48%;">
+      <li>
+          <a href="https://www.facebook.com/" target="_blank"><span class="icon-social-facebook"></span></a>
+        </li>
+        <li>
+          <a href="https://x.com/" target="_blank"><span class="icon-social-twitter"></span></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/" target="_blank"><span class="icon-social-youtube"></span></a>
+        </li>
+        <li class="mr-0">
+          <a href="https://www.instagram.com/" target="_blank"><span class="icon-social-instagram"></span></a>
+        </li>
+      </ul>
+    </div>
+</div>
+
 <!-- product tab end -->
 <!-- footer strat -->
 <footer class="bg-light theme1 position-relative">
@@ -185,17 +287,17 @@
 
             <div class="social-network">
               <ul class="d-flex">
-                <li>
-                  <a href="javascript:;" target="_blank"><span class="icon-social-facebook"></span></a>
+              <li>
+                  <a href="https://www.facebook.com/" target="_blank"><span class="icon-social-facebook"></span></a>
                 </li>
                 <li>
-                  <a href="javascript:;" target="_blank"><span class="icon-social-twitter"></span></a>
+                  <a href="https://x.com/" target="_blank"><span class="icon-social-twitter"></span></a>
                 </li>
                 <li>
-                  <a href="javascript:;" target="_blank"><span class="icon-social-youtube"></span></a>
+                  <a href="https://www.youtube.com/" target="_blank"><span class="icon-social-youtube"></span></a>
                 </li>
                 <li class="mr-0">
-                  <a href="javascript:;" target="_blank"><span class="icon-social-instagram"></span></a>
+                  <a href="https://www.instagram.com/" target="_blank"><span class="icon-social-instagram"></span></a>
                 </li>
               </ul>
             </div>
@@ -210,7 +312,7 @@
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-              <li><a href="homeController.php">Home </a></li>
+              <li><a href="../index.php">Home </a></li>
               <li><a href="modelController.php">3D Models</a></li>
               <li><a href="productsController.php">Products</a></li>
               <li><a href="contactusController.php">Contact us</a></li>
@@ -227,7 +329,7 @@
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-              <li><a href="homeController.php">Home </a></li>
+              <li><a href="../index.php">Home </a></li>
               <li><a href="modelController.php">3D Models</a></li>
               <li><a href="productsController.php">Products</a></li>
               <li><a href="contactusController.php">Contact us</a></li>
@@ -283,6 +385,137 @@
   <script src="static/js/plugins.js"></script>
   <script src="static/js/ajax-contact.js"></script>
   <script src="static/js/main.js"></script>
+  <script>
+
+  function openModal(element) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    modal.style.display = "block";
+    modalImg.src = element.src;
+  }
+
+
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+  document.getElementById('switchViewBtn').addEventListener('click', function() {
+ 
+    var viewpoint = document.getElementById('model__Camera001');
+    
+
+    viewpoint.setAttribute('position', '0 10 0');
+    viewpoint.setAttribute('orientation', '1 0 0 -1.57');
+  });
+   document.getElementById('frontViewBtn').addEventListener('click', function() {
+    var viewpoint = document.getElementById('model__Camera001');
+    viewpoint.setAttribute('position', '0.17676 2.06076 10.76071');
+    viewpoint.setAttribute('orientation', '0.19405 0.98099 0.00325 0.04096');
+  });
+
+  document.getElementById('sideViewBtn').addEventListener('click', function() {
+    var viewpoint = document.getElementById('model__Camera001');
+    viewpoint.setAttribute('position', '-10.66235 2.10074 -0.58167');
+    viewpoint.setAttribute('orientation', '0.00030 -1.00000 -0.00031 1.62541');
+  });
+
+  document.getElementById('backViewBtn').addEventListener('click', function() {
+    var viewpoint = document.getElementById('model__Camera001');
+    viewpoint.setAttribute('position', '1.00867 2.09379 10.6318');
+    viewpoint.setAttribute('orientation', '0.00661 0.99998 0.00039 0.09461');
+  });
+
+  document.getElementById('bottomViewBtn').addEventListener('click', function() {
+    var viewpoint = document.getElementById('model__Camera001');
+    viewpoint.setAttribute('position', '2.63498 -5.35188 0.26160');
+    viewpoint.setAttribute('orientation', '0.53695 0.68924 -0.48646 1.84087');
+  });
+</script>
+<script>
+  document.getElementById('leftViewBtn').addEventListener('click', function() {
+    var viewpoint = document.getElementById('model__Camera001');
+    viewpoint.setAttribute('position', '9.95810 2.24534 0.10140');
+    viewpoint.setAttribute('orientation', '-0.00247 0.99997 0.00748 1.58735');
+  });
+
+
+
+
+
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      
+      var x3dElement1 = document.getElementById('x3dElement1');
+      var x3dElement2 = document.getElementById('x3dElement2');
+      var x3dElement3 = document.getElementById('x3dElement3');
+      x3dElement2.style.display = 'none';
+      x3dElement3.style.display = 'none';
+      var btn001 = document.getElementById('btn001');
+      var btn002 = document.getElementById('btn002');
+      var btn003 = document.getElementById('btn003');
+      btn001.style.display = 'block';
+      btn002.style.display = 'none';
+      btn003.style.display = 'none';
+    });
+
+
+    function printMessage(productName) {
+  var x3dElement1 = document.getElementById('x3dElement1');
+  var x3dElement2 = document.getElementById('x3dElement2');
+  var x3dElement3 = document.getElementById('x3dElement3');
+
+  var btn001 = document.getElementById('btn001');
+  var btn002 = document.getElementById('btn002');
+  var btn003 = document.getElementById('btn003');
+
+  switch (productName) {
+    case 'BARQ ROOT BEER':
+      // x3dElement1.style.display = 'block';
+      // x3dElement2.style.display = 'none';
+      // x3dElement3.style.display = 'none';
+
+      // btn001.style.display = 'block';
+      // btn002.style.display = 'none';
+      // btn003.style.display = 'none';
+      window.location.href = 'http://localhost/Controls/modelController.php';
+      break;
+    case 'TOPO CHICO MINERAL WATER':
+      // x3dElement1.style.display = 'none';
+      // x3dElement2.style.display = 'block';
+      // x3dElement3.style.display = 'none';
+      // btn001.style.display = 'none';
+      // btn002.style.display = 'block';
+      // btn003.style.display = 'none';
+      window.location.href = 'http://localhost/Controls/modelController.php?view=model1';
+      break;
+    case 'PEACH CITRUS':
+      // x3dElement1.style.display = 'none';
+      // x3dElement2.style.display = 'none';
+      // x3dElement3.style.display = 'block';
+      // btn001.style.display = 'none';
+      // btn002.style.display = 'none';
+      // btn003.style.display = 'block';
+      window.location.href = 'http://localhost/Controls/modelController.php?view=model2';
+      break;
+    default:
+      // x3dElement1.style.display = 'none';
+      // x3dElement2.style.display = 'none';
+      // x3dElement3.style.display = 'block';
+      // btn001.style.display = 'none';
+      // btn002.style.display = 'none';
+      // btn003.style.display = 'block';
+      window.location.href = 'http://localhost/Controls/modelController.php';
+  }
+}
+
+
+  </script>
 </body>
 
 </html>

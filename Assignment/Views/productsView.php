@@ -31,7 +31,7 @@
         <div class="col-xl-8 col-lg-7 d-none d-lg-block">
           <ul class="main-menu d-flex justify-content-center">
             <li class="ml-0">
-              <a href="homeController.php" class="ps-0">Home </a>
+              <a href="../index.php" class="ps-0">Home </a>
             </li>
             <li class="position-static">
               <a href="modelController.php">3D Model</a>
@@ -62,7 +62,7 @@
       </div>
       <div class="col-12">
         <ol class="breadcrumb bg-transparent m-0 p-0 align-items-center justify-content-center">
-          <li class="breadcrumb-item"><a href="homeController.php">Home</a></li>
+          <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">Products</li>
         </ol>
       </div>
@@ -159,17 +159,17 @@
 
             <div class="social-network">
               <ul class="d-flex">
-                <li>
-                  <a href="javascript:;" target="_blank"><span class="icon-social-facebook"></span></a>
+              <li>
+                  <a href="https://www.facebook.com/" target="_blank"><span class="icon-social-facebook"></span></a>
                 </li>
                 <li>
-                  <a href="javascript:;" target="_blank"><span class="icon-social-twitter"></span></a>
+                  <a href="https://x.com/" target="_blank"><span class="icon-social-twitter"></span></a>
                 </li>
                 <li>
-                  <a href="javascript:;" target="_blank"><span class="icon-social-youtube"></span></a>
+                  <a href="https://www.youtube.com/" target="_blank"><span class="icon-social-youtube"></span></a>
                 </li>
                 <li class="mr-0">
-                  <a href="javascript:;" target="_blank"><span class="icon-social-instagram"></span></a>
+                  <a href="https://www.instagram.com/" target="_blank"><span class="icon-social-instagram"></span></a>
                 </li>
               </ul>
             </div>
@@ -184,7 +184,7 @@
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-              <li><a href="homeController.php">Home </a></li>
+              <li><a href="../index.php">Home </a></li>
               <li><a href="modelController.php">3D Models</a></li>
               <li><a href="productsController.php">Products</a></li>
               <li><a href="contactusController.php">Contact us</a></li>
@@ -201,7 +201,7 @@
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-              <li><a href="homeController.php">Home </a></li>
+              <li><a href="../index.php">Home </a></li>
               <li><a href="modelController.php">3D Models</a></li>
               <li><a href="productsController.php">Products</a></li>
               <li><a href="contactusController.php">Contact us</a></li>

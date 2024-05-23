@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="">
     <title>Coca cola-Home</title>
-    <link rel="stylesheet" href="static/css/fontawesome.min.css">
-    <link rel="stylesheet" href="static/css/ionicons.min.css">
-    <link rel="stylesheet" href="static/css/simple-line-icons.css">
-    <link rel="stylesheet" href="static/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/plugins.css">
-    <link rel="stylesheet" href="static/css/style.min.css">
+    <link rel="stylesheet" href="Controls/static/css/fontawesome.min.css">
+    <link rel="stylesheet" href="Controls/static/css/ionicons.min.css">
+    <link rel="stylesheet" href="Controls/static/css/simple-line-icons.css">
+    <link rel="stylesheet" href="Controls/static/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="Controls/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Controls/static/css/plugins.css">
+    <link rel="stylesheet" href="Controls/static/css/style.min.css">
 </head>
 
 <body>
@@ -35,16 +35,16 @@
         <div class="col-xl-8 col-lg-7 d-none d-lg-block">
           <ul class="main-menu d-flex justify-content-center">
             <li class="ml-0 active">
-              <a href="homeController.php" class="ps-0">Home </a>
+              <a href="index.php" class="ps-0">Home </a>
             </li>
             <li class="position-static">
-              <a href="modelController.php">3D Model</a>
+              <a href="Controls/modelController.php">3D Model</a>
 
             </li>
             <li > 
-              <a href="productsController.php">Products</a>
+              <a href="Controls/productsController.php">Products</a>
             </li>
-            <li class=" "><a href="contactusController.php">contact Us</a></li>
+            <li class=" "><a href="Controls/contactusController.php">contact Us</a></li>
           </ul>
         </div>
 
@@ -89,7 +89,7 @@
                 <span class="animated d-block" data-animation-in="fadeInRight" data-delay-in=".800">Taste It! </span>
                 <span class="animated font-weight-bold" data-animation-in="fadeInUp" data-delay-in="1.5">Explore Inside</span>
               </h2>
-              <a href="https://www.coca-cola.com/us/en/brands/barq-s" class="btn btn-outline-primary btn--lg animated mt-45 mt-sm-25" data-animation-in="fadeInLeft" data-delay-in="1.9">More Page</a>
+              <a href="https://www.coca-cola.com/gb/en/brands/coca-cola-original-taste" class="btn btn-outline-primary btn--lg animated mt-45 mt-sm-25" data-animation-in="fadeInLeft" data-delay-in="1.9">More Page</a>
             </div>
           </div>
         </div>
@@ -152,8 +152,8 @@
                     <div class="media flex-column">
                       <div class="product-thumbnail position-relative">
                         <span class="badge badge-danger top-right">New</span>
-                        <a href="">
-                          <img class="first-img" style="width: 300px; height: 300px;" src="static/picture/<?php echo $product['product_image_name']; ?>" alt="<?php echo $product['product_name']; ?>">
+                        <a href="<?php echo $product['produck_url']; ?>">
+                          <img class="first-img" style="width: 300px; height: 300px;" src="Controls/static/picture/<?php echo $product['product_image_name']; ?>" alt="<?php echo $product['product_name']; ?>">
                         </a>
 
                         <!-- product links end-->
@@ -196,7 +196,7 @@
 <footer class="bg-light theme1 position-relative">
 <div>
     <audio id="audio" controls>
-      <source src="static/media/OpenthatCocaCola.mp3" type="audio/mp3">
+      <source src="Controls/static/media/OpenthatCocaCola.mp3" type="audio/mp3">
     </audio>
 
   </div>
@@ -211,7 +211,7 @@
           <div class="footer-widget mx-w-400">
             <div class="footer-logo mb-25">
               <a href="">
-                <img src="static/picture/logo.png" alt="footer logo">
+                <img src="Controls/static/picture/logo.png" alt="footer logo">
               </a>
             </div>
             <p class="text mb-30">
@@ -220,17 +220,17 @@
            
             <div class="social-network">
               <ul class="d-flex">
-                <li>
-                  <a href="javascript:;" target="_blank"><span class="icon-social-facebook"></span></a>
+              <li>
+                  <a href="https://www.facebook.com/" target="_blank"><span class="icon-social-facebook"></span></a>
                 </li>
                 <li>
-                  <a href="javascript:;" target="_blank"><span class="icon-social-twitter"></span></a>
+                  <a href="https://x.com/" target="_blank"><span class="icon-social-twitter"></span></a>
                 </li>
                 <li>
-                  <a href="javascript:;" target="_blank"><span class="icon-social-youtube"></span></a>
+                  <a href="https://www.youtube.com/" target="_blank"><span class="icon-social-youtube"></span></a>
                 </li>
                 <li class="mr-0">
-                  <a href="javascript:;" target="_blank"><span class="icon-social-instagram"></span></a>
+                  <a href="https://www.instagram.com/" target="_blank"><span class="icon-social-instagram"></span></a>
                 </li>
               </ul>
             </div>
@@ -245,7 +245,7 @@
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-              <li><a href="homeController.php">Home </a></li>
+              <li><a href="../index.php">Home </a></li>
               <li><a href="modelController.php">3D Models</a></li>
               <li><a href="productsController.php">Products</a></li>
               <li><a href="contactusController.php">Contact us</a></li>
@@ -262,7 +262,7 @@
             </div>
             <!-- footer-menu start -->
             <ul class="footer-menu">
-            <li><a href="homeController.php">Home </a></li>
+            <li><a href="../index.php">Home </a></li>
               <li><a href="modelController.php">3D Models</a></li>
               <li><a href="productsController.php">Products</a></li>
               <li><a href="contactusController.php">Contact us</a></li>
