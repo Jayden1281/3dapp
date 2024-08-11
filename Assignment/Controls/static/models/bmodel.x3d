@@ -15,8 +15,8 @@
 		                avatarSize="0.25, 1.75, 0.75"
 		                />
 		<Background DEF="WO_World"
-		            groundColor="1 1 1"
-		            skyColor="1 1 1"
+		            groundColor="0.051 0.051 0.051"
+		            skyColor="0.051 0.051 0.051"
 		            />
 		<Transform DEF="瓶盖_003_TRANSFORM"
 		           translation="0.000000 3.697931 0.032542"

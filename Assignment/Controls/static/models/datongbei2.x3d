@@ -6,15 +6,65 @@
 		<meta name="generator" content="Blender 4.1.0" />
 	</head>
 	<Scene>
-		<NavigationInfo headlight="true"
-		                visibilityLimit="0.0"
-		                type='"EXAMINE", "ANY"'
-		                avatarSize="0.25, 1.75, 0.75"
-		                />
+		<Viewpoint DEF="CameraFront"
+		position="-0.03543 2.02882 10.38334"
+		orientation="0.00000 0.00000 0.00000 0.00000"
+		fieldOfView="0.602400004863739"
+		description="CameraFront" />
+
+		<Viewpoint DEF="CameraTop"
+		position="-0.03573 8.18949 -0.00177"
+		orientation="-0.9967 -0.05911 -0.05441 1.56738"
+		fieldOfView="0.602400004863739"
+		description="CameraTop" />
+
+		<Viewpoint DEF="CameraBottom"
+		position="0.09183 -5.79814 -0.29994"
+		orientation="0.99754 -0.03832 0.05875 1.63893"
+		fieldOfView="0.60240"
+		description="CameraBottom" />
+		<Viewpoint DEF="CameraSide"
+		position="-10.15705 2.06087 -2.12560"
+		orientation="-0.00460 -0.99999 0.00116 1.77238"
+		fieldOfView="0.60240"
+		description="CameraBottom" />
+	<NavigationInfo 
+	on="true"
+		DEF="NI11"
+		headlight="false"
+		visibilityLimit="0.0"
+		type='"EXAMINE", "ANY"'
+		avatarSize="0.25, 1.75, 0.75"
+		/>
+	<DirectionalLight DEF="DL11"
+	on="false"
+		intensity="0.900000005960464"
+		color="blue"
+		direction="0 0 -1"
+		ambientIntensity="0.5"/>
+	<PointLight DEF="PL11"
+	on="false"
+		global="true"
+		intensity="0.9"
+		location="10 0 10"
+		radius="100" 
+		attenuation="1 0 0"/>
+		<SpotLight DEF="SL11"
+		on="false"
+		global="true"
+		intensity="1"
+		location="-360.299987792969 100 -227.300003051758"
+		direction="0.643100023269653 -0.556500017642975 0.526099979877472"
+		cutOffAngle="0.785399973392487"
+		beamWidth="0.750500023365021"
+		radius="829.200012207031" />
 		<Background DEF="WO_World"
-		            groundColor="1 1 1"
-		            skyColor="1 1 1"
+		            groundColor="0.051 0.051 0.051"
+		            skyColor="0.051 0.051 0.051"
 		            />
+							<Transform DEF="AllOBJECT"
+
+		           >
 		<Transform DEF="柱体_TRANSFORM"
 		           translation="0.000000 1.987417 0.000000"
 		           scale="1.000000 1.000000 1.000000"
@@ -63,7 +113,7 @@
 				<Group DEF="group_ME_柱体_001">
 					<Shape>
 						<Appearance>
-							<ImageTexture url='"logo_t1.png"'/>
+							<ImageTexture url='"cup2.jpg"' id='CupLogoTexture'/>
 							<Material DEF="MA_材质"
 							          diffuseColor="0.800 0.800 0.800"
 							          specularColor="0.401 0.401 0.401"
@@ -86,5 +136,18 @@
 				</Group>
 			</Transform>
 		</Transform>
+				</Transform>
+					<timesensor def="time" cycleinterval="2" loop="true" enabled="true" starttime="0" stoptime="0" pausetime="0" resumetime="0" cycletime="0" elapsedtime="0" fraction_changed="0" isactive="false" ispaused="false" time="0" first="true" firstcycle="0"></timesensor>
+	<positioninterpolator def="move" key="0 0.33  0.66 1" keyvalue="0 0 0  0 0 0  0 0 0  0 0 0" set_fraction="0" buffer="" interpolation="LINEAR" duration="1"></positioninterpolator>
+	<OrientationInterpolator DEF="RotationInterpolator"
+                             key="0 0.5 1"
+                             keyValue="0 1 0 0.0  0 1 0 0  0 1 0 0" ></OrientationInterpolator>
+							 
+
+	<route fromnode="time" fromfield="fraction_changed" tonode="RotationInterpolator" tofield="set_fraction"></route>
+	<route fromnode="RotationInterpolator" fromfield="value_changed" tonode="AllOBJECT" tofield="rotation"></route>
+
+	<route fromnode="time" fromfield="fraction_changed" tonode="move" tofield="set_fraction"></route>
+	<route fromnode="move" fromfield="value_changed" tonode="AllOBJECT" tofield="translation"></route>
 	</Scene>
 </X3D>
